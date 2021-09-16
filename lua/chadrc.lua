@@ -220,24 +220,24 @@ M.plugins = {
          if not lspconfig.golangcilsp then
             configs.golangcilsp = {
                default_config = {
-                  cmd = {'golangci-lint-langserver'},
-                  root_dir = lspconfig.util.root_pattern('.git', 'go.mod'),
+                  cmd = { "golangci-lint-langserver" },
+                  root_dir = lspconfig.util.root_pattern(".git", "go.mod"),
                   init_options = {
                      command = { "golangci-lint", "run", "--out-format", "json" },
                   },
                },
             }
          end
-      end
+      end,
    },
    lspconfig = {
       -- servers = {"html", "cssls"}
-      servers = {"gopls", "yamlls", "dockerls","jsonls", "golangcilsp"},
+      servers = { "gopls", "yamlls", "dockerls", "jsonls", "golangcilsp" },
       setup_configs = {
          gopls = {
             settings = {
                gopls = {
-                  hoverKind = 'Structured',
+                  hoverKind = "Structured",
                   gofumpt = true,
                   analyses = {
                      unusedparams = true,
@@ -248,9 +248,9 @@ M.plugins = {
             },
          },
          golangcilsp = {
-            filetypes = {'go'}
-         }
-      }
+            filetypes = { "go" },
+         },
+      },
    },
 }
 
