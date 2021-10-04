@@ -237,13 +237,10 @@ M.plugins = {
          gopls = {
             settings = {
                gopls = {
-                  hoverKind = "Structured",
                   gofumpt = true,
-                  analyses = {
-                     unusedparams = true,
-                     shadow = true,
-                  },
+                  experimentalPostfixCompletions = true,
                   staticcheck = true,
+                  usePlaceholders = true,
                },
             },
          },
