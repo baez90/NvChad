@@ -12,6 +12,7 @@ M.options = {
    ruler = false,
    hidden = true,
    ignorecase = true,
+   smartcase = true,
    mapleader = " ",
    mouse = "a",
    number = true,
@@ -41,6 +42,7 @@ M.options = {
 
 -- ui configs
 M.ui = {
+   hl_override = "", -- path of your file which contains highlight stuffs
    italic_comments = false,
    -- theme to be used, check available themes with `<leader> + t + h`
    theme = "onedark",
@@ -71,8 +73,10 @@ M.plugins = {
       vim_matchup = true, -- % operator enhancements
       cmp = true,
       nvimtree = true,
+      autopairs = true,
    },
    options = {
+      autopairs = { loadAfter = "nvim-cmp" },
       lspconfig = {
          setup_lspconf = "", -- path of file containing setups of different lsps
       },
@@ -121,7 +125,7 @@ M.mappings = {
       forward = "<C-l>",
       next_line = "<C-k>",
       prev_line = "<C-j>",
-      top_of_line = "<C-a>",
+      beginning_of_line = "<C-a>",
    },
    --better window movement
    window_nav = {

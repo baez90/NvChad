@@ -21,6 +21,7 @@ opt.fillchars = { eob = " " }
 
 opt.hidden = options.hidden
 opt.ignorecase = options.ignorecase
+opt.smartcase = options.smartcase
 opt.mouse = options.mouse
 
 -- Numbers
@@ -45,7 +46,7 @@ opt.updatetime = options.updatetime
 
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
-opt.whichwrap:append "<>hl"
+opt.whichwrap:append "<>[]hl"
 
 g.mapleader = options.mapleader
 
