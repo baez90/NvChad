@@ -16,7 +16,7 @@ M.options, M.ui, M.mappings, M.plugins = {}, {}, {}, {}
 -- }
 
 M.ui = {
-  theme = "gruvbox"
+   theme = "gruvbox",
 }
 
 -- NvChad included plugin options & overrides
